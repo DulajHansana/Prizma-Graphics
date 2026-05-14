@@ -1,0 +1,144 @@
+.section {
+  padding: 120px 24px;
+  background: var(--color-bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.gridBg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 16px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  padding: 0 12px;
+}
+
+.connector {
+  position: absolute;
+  top: 44px;
+  left: calc(50% + 44px);
+  right: calc(-50% + 44px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--step-color, #00d4ff), rgba(255,255,255,0.1));
+  z-index: 0;
+}
+
+/* The connector is on the parent step element */
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 44px;
+  left: 56%;
+  width: 88%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+}
+
+.iconBubble {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--step-color, #00d4ff), 0.2) 0%, transparent 70%);
+  border: 2px solid var(--step-color, #00d4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--step-color, #00d4ff);
+  position: relative;
+  z-index: 1;
+  animation: pulse-glow 3s ease-in-out infinite;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
+}
+
+.stepNumber {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  background: var(--step-color, #00d4ff);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--color-bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+}
+
+.card {
+  padding: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-text-primary);
+}
+
+.stepDesc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .step::after {
+    display: none;
+  }
+  .step {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .iconBubble {
+    flex-shrink: 0;
+  }
+  .card {
+    text-align: left;
+  }
+}
