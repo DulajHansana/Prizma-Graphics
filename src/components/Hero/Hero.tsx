@@ -132,10 +132,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           {[
-            { value: '15K+', label: 'Happy Clients' },
+            { value: '3', label: 'Happy Clients' },
             { value: '99.9%', label: 'Satisfaction Rate' },
             { value: '48hr', label: 'Avg. Turnaround' },
-            { value: '50+', label: 'Print Products' },
+            { value: '4', label: 'Print Products' },
           ].map((stat, i) => (
             <div key={i} className={styles.stat}>
               <span className={styles.statValue}>{stat.value}</span>

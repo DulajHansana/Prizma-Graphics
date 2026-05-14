@@ -31,52 +31,52 @@ export default function ThreeCanvas() {
     const shapes: THREE.Mesh[] = [];
 
     // Gradient-like material helper
-    const makeMat = (color1: number, opacity = 0.8) =>
+    const makeMat = (color1: number, opacity = 0.85) =>
       new THREE.MeshStandardMaterial({
         color: color1,
-        metalness: 0.6,
-        roughness: 0.2,
+        metalness: 0.3,
+        roughness: 0.3,
         transparent: true,
         opacity,
       });
 
     // Large rotating torus
     const torusGeo = new THREE.TorusGeometry(1.4, 0.35, 32, 64);
-    const torusMesh = new THREE.Mesh(torusGeo, makeMat(0x00d4ff, 0.5));
+    const torusMesh = new THREE.Mesh(torusGeo, makeMat(0x9333ea, 0.55));
     torusMesh.position.set(2.5, 0.5, -1);
     scene.add(torusMesh);
 
     // Icosahedron center piece
     const icoGeo = new THREE.IcosahedronGeometry(1.1, 0);
-    const icoMesh = new THREE.Mesh(icoGeo, makeMat(0x7c3aed, 0.7));
+    const icoMesh = new THREE.Mesh(icoGeo, makeMat(0x6d28d9, 0.75));
     icoMesh.position.set(-2, 0, -1);
     scene.add(icoMesh);
     shapes.push(icoMesh);
 
     // Box top-right
     const boxGeo = new THREE.BoxGeometry(1, 1, 1);
-    const boxMesh = new THREE.Mesh(boxGeo, makeMat(0xf472b6, 0.6));
+    const boxMesh = new THREE.Mesh(boxGeo, makeMat(0xc026d3, 0.65));
     boxMesh.position.set(3, -1.5, -2);
     scene.add(boxMesh);
     shapes.push(boxMesh);
 
     // Octahedron bottom-left
     const octaGeo = new THREE.OctahedronGeometry(0.8);
-    const octaMesh = new THREE.Mesh(octaGeo, makeMat(0xfbbf24, 0.7));
+    const octaMesh = new THREE.Mesh(octaGeo, makeMat(0xa855f7, 0.75));
     octaMesh.position.set(-3.5, -1.5, -1.5);
     scene.add(octaMesh);
     shapes.push(octaMesh);
 
     // Small torus knot
     const knotGeo = new THREE.TorusKnotGeometry(0.5, 0.15, 80, 16);
-    const knotMesh = new THREE.Mesh(knotGeo, makeMat(0x00d4ff, 0.6));
+    const knotMesh = new THREE.Mesh(knotGeo, makeMat(0x7e22ce, 0.65));
     knotMesh.position.set(0.5, 2.5, -0.5);
     scene.add(knotMesh);
     shapes.push(knotMesh);
 
     // Small cone
     const coneGeo = new THREE.ConeGeometry(0.5, 1.2, 6);
-    const coneMesh = new THREE.Mesh(coneGeo, makeMat(0xf97316, 0.65));
+    const coneMesh = new THREE.Mesh(coneGeo, makeMat(0xd946ef, 0.70));
     coneMesh.position.set(-1, -2.5, -1);
     scene.add(coneMesh);
     shapes.push(coneMesh);
@@ -92,27 +92,27 @@ export default function ThreeCanvas() {
     const particleGeo = new THREE.BufferGeometry();
     particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     const particleMat = new THREE.PointsMaterial({
-      color: 0x00d4ff,
-      size: 0.04,
+      color: 0x9333ea,
+      size: 0.05,
       transparent: true,
-      opacity: 0.5,
+      opacity: 0.35,
     });
     const particles = new THREE.Points(particleGeo, particleMat);
     scene.add(particles);
 
     // ── Lights ────────────────────────────────────────────────────────────────
-    const ambient = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambient = new THREE.AmbientLight(0xffffff, 1.8);
     scene.add(ambient);
 
-    const pointLight1 = new THREE.PointLight(0x00d4ff, 3, 20);
+    const pointLight1 = new THREE.PointLight(0x9333ea, 4, 20);
     pointLight1.position.set(3, 3, 3);
     scene.add(pointLight1);
 
-    const pointLight2 = new THREE.PointLight(0x7c3aed, 3, 20);
+    const pointLight2 = new THREE.PointLight(0x6d28d9, 4, 20);
     pointLight2.position.set(-3, -2, 2);
     scene.add(pointLight2);
 
-    const pointLight3 = new THREE.PointLight(0xf472b6, 2, 15);
+    const pointLight3 = new THREE.PointLight(0xc026d3, 3, 15);
     pointLight3.position.set(0, -3, 1);
     scene.add(pointLight3);
 

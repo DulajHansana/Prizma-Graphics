@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './Footer.module.css';
-// Social icons handled via text characters
+import { FaFacebookF, FaInstagram, FaTiktok, FaLinkedinIn } from 'react-icons/fa';
+import { SiNextdotjs } from 'react-icons/si';
 
 const footerLinks = {
   Services: ['Business Cards', 'Banners & Signage', 'Custom Packaging', 'Photo Printing', 'Rush Printing'],
@@ -9,7 +10,12 @@ const footerLinks = {
   Legal: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Refund Policy'],
 };
 
-const socialLabels = ['𝕏', 'IG', 'in', 'f'];
+const socials = [
+  { icon: FaFacebookF,  href: 'https://www.facebook.com/prizmagraphic/',                       label: 'Facebook' },
+  { icon: FaInstagram,  href: 'https://www.instagram.com/prizmagraphic/',                      label: 'Instagram' },
+  { icon: FaTiktok,     href: 'https://www.tiktok.com/@prizmagraphics?_r=1&_t=ZS-96INLBsujI4',  label: 'TikTok' },
+  { icon: FaLinkedinIn, href: 'https://www.linkedin.com/company/prizma-graphics-pvt-ltd/',     label: 'LinkedIn' },
+];
 
 export default function Footer() {
   return (
@@ -33,9 +39,9 @@ export default function Footer() {
               Premium digital printing for brands that refuse to blend in.
             </p>
             <div className={styles.socials}>
-              {socialLabels.map((label, i) => (
-                <a key={i} href="#" className={styles.socialLink}>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 700 }}>{label}</span>
+              {socials.map(({ icon: Icon, href, label }) => (
+                <a key={label} href={href} className={styles.socialLink} aria-label={label} target="_blank" rel="noopener noreferrer">
+                  <Icon size={16} />
                 </a>
               ))}
             </div>
@@ -62,13 +68,8 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © 2026 Prizma Graphics (PVT) Ltd. All rights reserved. Crafted with ❤️ for creators.
+            © 2026 Prizma Graphics (PVT) Ltd. All rights reserved. Built with <SiNextdotjs size={14} style={{ display: 'inline', verticalAlign: 'middle', marginBottom: '2px' }} />
           </p>
-          <div className={styles.badges}>
-            <span className={styles.badge}>🔒 SSL Secured</span>
-            <span className={styles.badge}>⚡ Fast Shipping</span>
-            <span className={styles.badge}>✓ 100% Satisfaction</span>
-          </div>
         </div>
       </div>
     </footer>

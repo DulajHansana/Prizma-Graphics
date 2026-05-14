@@ -6,31 +6,22 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Sarah Chen',
-    role: 'Creative Director, Luminos Agency',
-    avatar: 'SC',
+    name: 'Innovative Pesticides Marketing (PVT) Ltd.',
+    role: 'Flex Banner Printing Client',
+    avatar: 'IP',
     avatarGradient: 'linear-gradient(135deg, #00d4ff, #7c3aed)',
     rating: 5,
     quote:
-      "Prizma Graphics' quality is absolutely unmatched. The foil business cards we ordered for our client blew everyone in the room away. The attention to detail is extraordinary.",
+      'We approached Prizma Graphics for large-scale flex banners for our seasonal campaigns and the results were outstanding. The colors were vivid, the print was sharp even at large formats, and the delivery was on time. Their team was very professional and guided us throughout the process. We are extremely satisfied with the quality and will definitely be coming back for future printing needs.',
   },
   {
-    name: 'Marcus Williams',
-    role: 'Founder, Urban Threads Co.',
-    avatar: 'MW',
-    avatarGradient: 'linear-gradient(135deg, #f472b6, #7c3aed)',
+    name: 'Oshanda Book Shop',
+    role: 'Custom Sticker Printing Client',
+    avatar: 'OB',
+    avatarGradient: 'linear-gradient(135deg, #f472b6, #fbbf24)',
     rating: 5,
     quote:
-      "We've tried 6 different printers. Prizma Graphics is the only one that consistently nails color accuracy for our packaging. The rush service is a lifesaver for product launches.",
-  },
-  {
-    name: 'Elena Rodriguez',
-    role: 'Marketing Manager, TechPeak',
-    avatar: 'ER',
-    avatarGradient: 'linear-gradient(135deg, #fbbf24, #f97316)',
-    rating: 5,
-    quote:
-      "The conference banners arrived same-day and looked incredible. Our booth was the talk of the entire event. Prizma Graphics is our permanent printing partner now.",
+      'Prizma Graphics delivered premium quality stickers for our book shop that exceeded all our expectations. The finish was smooth, the colors were perfectly matched, and the cutting was precise. Our customers absolutely love the branded stickers we now include with every purchase. The team at Prizma was friendly, responsive, and made the whole experience smooth and enjoyable. Highly recommended!',
   },
 ];
 
@@ -47,7 +38,7 @@ export default function Testimonials() {
         >
           <div className="section-tag">✦ Testimonials</div>
           <h2 className={styles.title}>
-            Trusted by <span className="gradient-text">15,000+ Brands</span>
+            Trusted by <span className="gradient-text">2+ Brands</span>
           </h2>
         </motion.div>
 

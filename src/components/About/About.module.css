@@ -9,11 +9,11 @@
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(109,40,217,0.08) 0%, transparent 70%);
   top: 0;
   left: -100px;
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(70px);
   pointer-events: none;
 }
 
@@ -21,11 +21,11 @@
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(147,51,234,0.08) 0%, transparent 70%);
   bottom: 0;
   right: -100px;
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(70px);
   pointer-events: none;
 }
 
@@ -68,7 +68,7 @@
   gap: 16px;
   position: relative;
   padding: 40px 60px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(124, 58, 237, 0.04);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
 }
@@ -149,7 +149,7 @@
   border-radius: 50%;
   overflow: hidden;
   background: var(--color-bg-card);
-  border: 2px solid rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(124, 58, 237, 0.10);
 }
 
 .photo {

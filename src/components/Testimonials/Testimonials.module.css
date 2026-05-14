@@ -24,21 +24,27 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
   padding: 32px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
+  text-align: center;
 }
 
 .stars {
   display: flex;
   gap: 4px;
+  justify-content: center;
 }
 
 .quote {
@@ -51,10 +57,12 @@
 
 .author {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   padding-top: 16px;
   border-top: 1px solid var(--border-subtle);
+  width: 100%;
 }
 
 .avatar {
@@ -75,11 +83,13 @@
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--color-text-primary);
+  text-align: center;
 }
 
 .role {
   font-size: 0.78rem;
   color: var(--color-text-muted);
+  text-align: center;
 }
 
 /* Brand strip */
