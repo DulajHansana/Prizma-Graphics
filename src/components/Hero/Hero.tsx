@@ -104,8 +104,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
         >
-          From concept to creation we deliver pixel-perfect prints with
-          cutting-edge technology and premium materials. Your brand deserves
+          From concept to creation we deliver pixel perfect prints with
+          cutting edge technology and premium materials. Your brand deserves
           nothing less than extraordinary.
         </motion.p>
 
@@ -116,7 +116,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
         >
           <a href="#contact" className="btn-primary">
-            Start Your Project <ArrowRight size={18} />
+            Get a Quote <ArrowRight size={18} />
           </a>
           <a href="#portfolio" className="btn-secondary">
             <Play size={16} fill="currentColor" />

@@ -124,7 +124,7 @@ export default function Portfolio() {
           transition={{ delay: 0.3 }}
         >
           <a href="#contact" className="btn-primary">
-            Start Your Project
+            Get a Quote
           </a>
         </motion.div>
       </div>

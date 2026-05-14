@@ -23,7 +23,7 @@ export default function Footer() {
             <div className={styles.logo}>
               <Image
                 src="/logo.webp"
-                alt="PrintCraft Logo"
+                alt="Prizma Graphics Logo"
                 width={140}
                 height={40}
                 className={styles.logoImg}
@@ -62,7 +62,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © 2024 PrintCraft Studio. All rights reserved. Crafted with ❤️ for creators.
+            © 2026 Prizma Graphics (PVT) Ltd. All rights reserved. Crafted with ❤️ for creators.
           </p>
           <div className={styles.badges}>
             <span className={styles.badge}>🔒 SSL Secured</span>

@@ -12,7 +12,7 @@ const testimonials = [
     avatarGradient: 'linear-gradient(135deg, #00d4ff, #7c3aed)',
     rating: 5,
     quote:
-      "PrintCraft's quality is absolutely unmatched. The foil business cards we ordered for our client blew everyone in the room away. The attention to detail is extraordinary.",
+      "Prizma Graphics' quality is absolutely unmatched. The foil business cards we ordered for our client blew everyone in the room away. The attention to detail is extraordinary.",
   },
   {
     name: 'Marcus Williams',
@@ -21,7 +21,7 @@ const testimonials = [
     avatarGradient: 'linear-gradient(135deg, #f472b6, #7c3aed)',
     rating: 5,
     quote:
-      "We've tried 6 different printers. PrintCraft is the only one that consistently nails color accuracy for our packaging. The rush service is a lifesaver for product launches.",
+      "We've tried 6 different printers. Prizma Graphics is the only one that consistently nails color accuracy for our packaging. The rush service is a lifesaver for product launches.",
   },
   {
     name: 'Elena Rodriguez',
@@ -30,7 +30,7 @@ const testimonials = [
     avatarGradient: 'linear-gradient(135deg, #fbbf24, #f97316)',
     rating: 5,
     quote:
-      "The conference banners arrived same-day and looked incredible. Our booth was the talk of the entire event. PrintCraft is our permanent printing partner now.",
+      "The conference banners arrived same-day and looked incredible. Our booth was the talk of the entire event. Prizma Graphics is our permanent printing partner now.",
   },
 ];
 
@@ -85,16 +85,6 @@ export default function Testimonials() {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Brand logos strip */}
-        <div className={styles.brands}>
-          <p className={styles.brandsLabel}>Trusted by brands worldwide</p>
-          <div className={styles.logoStrip}>
-            {['NEXUS', 'AETHER', 'LUMINOS', 'VORTEX', 'ZENITH', 'PRISM', 'APEX'].map((b) => (
-              <span key={b} className={styles.brandName}>{b}</span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

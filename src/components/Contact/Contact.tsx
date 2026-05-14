@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Contact.module.css';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Send, CheckCircle } from 'lucide-react';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -56,9 +56,10 @@ export default function Contact() {
 
             <div className={styles.contacts}>
               {[
-                { icon: Mail, label: 'Email', value: 'hello@printcraft.studio' },
-                { icon: Phone, label: 'Phone', value: '+1 (800) 555-PRINT' },
-                { icon: MapPin, label: 'Studio', value: '123 Print Lane, Design City, CA 90210' },
+                { icon: Mail,  label: 'Email',   value: 'prizmagraphics2026@gmail.com' },
+                { icon: Phone, label: 'Phone',   value: '0778937472' },
+                { icon: Globe, label: 'Website', value: 'www.prizmagraphics.lk' },
+                { icon: MapPin,label: 'Address', value: '32/B, Gonawala Rd, Sapugaskanda, Kelaniya' },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className={styles.contactItem}>
                   <div className={styles.contactIcon}>
@@ -72,17 +73,7 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Decorative 3D cube */}
-            <div className={styles.decorCube}>
-              <div className={styles.cubeInner}>
-                <div className={`${styles.cubeFace} ${styles.cubeFront}`} />
-                <div className={`${styles.cubeFace} ${styles.cubeBack}`} />
-                <div className={`${styles.cubeFace} ${styles.cubeRight}`} />
-                <div className={`${styles.cubeFace} ${styles.cubeLeft}`} />
-                <div className={`${styles.cubeFace} ${styles.cubeTop}`} />
-                <div className={`${styles.cubeFace} ${styles.cubeBottom}`} />
-              </div>
-            </div>
+
           </motion.div>
 
           {/* Form column */}

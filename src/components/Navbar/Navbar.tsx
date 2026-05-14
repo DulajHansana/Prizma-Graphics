@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Products', href: '#products' },
   { label: 'Portfolio', href: '#portfolio' },
+  { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -33,7 +34,7 @@ export default function Navbar() {
         <Link href="/" className={styles.logo}>
           <Image
             src="/logo.webp"
-            alt="PrintCraft Logo"
+            alt="Prizma Graphics Logo"
             width={200}
             height={60}
             priority
